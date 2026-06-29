@@ -345,14 +345,10 @@ function HostAdmin() {
                     flex: 1, 
                     padding: '8px 12px', 
                     fontSize: '12px',
-                    display: 'flex',
+                    display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '6px',
-                    borderRadius: '20px',
-                    border: '1px solid var(--border-color)',
-                    background: eventType === 'offline' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
-                    color: eventType === 'offline' ? '#fff' : 'var(--text-secondary)',
                     cursor: 'pointer'
                   }}
                 >
@@ -367,14 +363,10 @@ function HostAdmin() {
                     flex: 1, 
                     padding: '8px 12px', 
                     fontSize: '12px',
-                    display: 'flex',
+                    display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '6px',
-                    borderRadius: '20px',
-                    border: '1px solid var(--border-color)',
-                    background: eventType === 'online' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
-                    color: eventType === 'online' ? '#fff' : 'var(--text-secondary)',
                     cursor: 'pointer'
                   }}
                 >
@@ -389,14 +381,10 @@ function HostAdmin() {
                     flex: 1, 
                     padding: '8px 12px', 
                     fontSize: '12px',
-                    display: 'flex',
+                    display: 'inline-flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: '6px',
-                    borderRadius: '20px',
-                    border: '1px solid var(--border-color)',
-                    background: eventType === 'hybrid' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
-                    color: eventType === 'hybrid' ? '#fff' : 'var(--text-secondary)',
                     cursor: 'pointer'
                   }}
                 >

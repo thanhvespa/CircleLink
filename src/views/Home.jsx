@@ -304,15 +304,10 @@ function Home() {
                   style={{ 
                     cursor: 'pointer', 
                     padding: '8px 16px', 
-                    display: 'flex', 
+                    display: 'inline-flex', 
                     alignItems: 'center', 
                     gap: '6px',
-                    margin: 0,
-                    borderRadius: '20px',
-                    border: '1px solid var(--border-color)',
-                    background: eventType === 'offline' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
-                    color: eventType === 'offline' ? '#fff' : 'var(--text-secondary)',
-                    transition: 'all 0.2s'
+                    margin: 0
                   }}
                 >
                   <input 
@@ -331,15 +326,10 @@ function Home() {
                   style={{ 
                     cursor: 'pointer', 
                     padding: '8px 16px', 
-                    display: 'flex', 
+                    display: 'inline-flex', 
                     alignItems: 'center', 
                     gap: '6px',
-                    margin: 0,
-                    borderRadius: '20px',
-                    border: '1px solid var(--border-color)',
-                    background: eventType === 'online' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
-                    color: eventType === 'online' ? '#fff' : 'var(--text-secondary)',
-                    transition: 'all 0.2s'
+                    margin: 0
                   }}
                 >
                   <input 
@@ -358,15 +348,10 @@ function Home() {
                   style={{ 
                     cursor: 'pointer', 
                     padding: '8px 16px', 
-                    display: 'flex', 
+                    display: 'inline-flex', 
                     alignItems: 'center', 
                     gap: '6px',
-                    margin: 0,
-                    borderRadius: '20px',
-                    border: '1px solid var(--border-color)',
-                    background: eventType === 'hybrid' ? 'var(--accent-gradient)' : 'rgba(255,255,255,0.03)',
-                    color: eventType === 'hybrid' ? '#fff' : 'var(--text-secondary)',
-                    transition: 'all 0.2s'
+                    margin: 0
                   }}
                 >
                   <input 
