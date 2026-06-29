@@ -78,6 +78,8 @@ const translations = {
     faqA4: "Mỗi profile trong danh bạ sự kiện đều có nút xuất vCard. Khi bấm, hệ thống sẽ tự sinh file .vcf tương thích với iPhone/Android để bạn lưu trực tiếp vào danh bạ điện thoại chỉ trong 1-Click.",
     faqQ5: "Nền tảng này có chạy offline hoặc không cần database đám mây không?",
     faqA5: "Có. CircleLink hỗ trợ Chế Độ Kép thông minh. Nếu không cấu hình database Supabase trong file .env, ứng dụng tự động chạy ở chế độ fallback LocalStorage và đồng bộ giữa các tab trình duyệt để bạn thử nghiệm nhanh chóng.",
+    faqAuthorContactTitle: "Liên hệ tác giả",
+    faqAuthorContactText: "Mọi thắc mắc, góp ý hoặc nhu cầu hợp tác phát triển dự án, vui lòng liên hệ trực tiếp với tác giả:",
 
     // LIVE BOARD VIEW
     liveBoard: "Live Board",
@@ -231,6 +233,8 @@ const translations = {
     faqA4: "Every profile in the event directory has a vCard button. Clicking it generates a native .vcf file compatible with iOS/Android to save the contact in 1-click.",
     faqQ5: "Can it run without a cloud database?",
     faqA5: "Yes. CircleLink features a smart Dual-Mode Engine. Without Supabase config, it runs on local storage and syncs between tabs for immediate local testing.",
+    faqAuthorContactTitle: "Contact Author",
+    faqAuthorContactText: "For any questions, feedback, or development inquiries, please contact the author directly:",
 
     // LIVE BOARD VIEW
     liveBoard: "Live Board",

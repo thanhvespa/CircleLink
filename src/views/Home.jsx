@@ -473,6 +473,33 @@ function Home() {
               </div>
             ))}
           </div>
+
+          <div className="faq-author-contact glass" style={{ 
+            marginTop: '30px', 
+            padding: '24px', 
+            borderRadius: '16px', 
+            border: '1px solid var(--border-color)',
+            background: 'rgba(255, 255, 255, 0.02)',
+            textAlign: 'center'
+          }}>
+            <h4 style={{ margin: '0 0 10px 0', fontFamily: 'var(--font-heading)', fontWeight: '700', fontSize: '15px', color: 'var(--text-primary)' }}>
+              <i className="fa-solid fa-address-book" style={{ marginRight: '8px', color: 'var(--accent-violet)' }}></i>
+              {t.faqAuthorContactTitle}
+            </h4>
+            <p style={{ margin: '0 0 16px 0', fontSize: '13px', color: 'var(--text-secondary)' }}>
+              {t.faqAuthorContactText}
+            </p>
+            <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: 'var(--text-primary)', fontWeight: '600' }}>
+                <i className="fa-solid fa-user-circle" style={{ color: 'var(--accent-pink)' }}></i>
+                <span>Thanhvespa</span>
+              </div>
+              <a href="mailto:thanhinbali@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', color: 'var(--text-primary)', textDecoration: 'none', fontWeight: '600' }}>
+                <i className="fa-solid fa-envelope" style={{ color: 'var(--accent-violet)' }}></i>
+                <span style={{ textDecoration: 'underline' }}>thanhinbali@gmail.com</span>
+              </a>
+            </div>
+          </div>
         </section>
       </div>
 
