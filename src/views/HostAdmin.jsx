@@ -171,10 +171,9 @@ function HostAdmin() {
       }
     };
 
-    // Prepend 'sep=,' so Excel overrides local regional separator settings
-    let csvContent = 'sep=,\r\n' + (lang === 'vi'
+    let csvContent = lang === 'vi'
       ? 'Họ tên,Vai trò,Bio,Đang tìm kiếm,Có thể giúp đỡ,Điện thoại/Zalo,Quyền SĐT,Email,Quyền Email,Telegram,Facebook,LinkedIn,Instagram,Thời gian Check-in\r\n'
-      : 'Name,Role,Bio,Looking For,Can Help With,Phone/Zalo,Phone Privacy,Email,Email Privacy,Telegram,Facebook,LinkedIn,Instagram,Check-in Time\r\n');
+      : 'Name,Role,Bio,Looking For,Can Help With,Phone/Zalo,Phone Privacy,Email,Email Privacy,Telegram,Facebook,LinkedIn,Instagram,Check-in Time\r\n';
     
     attendeesList.forEach(guest => {
       const escape = (val) => {
