@@ -184,7 +184,7 @@ function HostAdmin() {
       const contactsObj = parseJsonField(guest.contacts);
       const privacyObj = parseJsonField(guest.privacy);
       
-      const phone = contactsObj.phone || '';
+      const phone = contactsObj.phone ? `="${contactsObj.phone}"` : '';
       const email = contactsObj.email || '';
       const telegram = contactsObj.telegram || '';
       const facebook = contactsObj.facebook || '';
