@@ -24,8 +24,6 @@ function Home() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('circlelink_host_email'));
   const [hostEmail, setHostEmail] = useState(localStorage.getItem('circlelink_host_email') || '');
   const [showLoginModal, setShowLoginModal] = useState(false);
-  const [loginEmail, setLoginEmail] = useState('');
-  const [loginPassword, setLoginPassword] = useState('');
   const [loginError, setLoginError] = useState('');
 
   // Ref hooks for smooth scrolling
@@ -132,23 +130,7 @@ function Home() {
     }
   };
 
-  const handleLoginSubmit = (e) => {
-    e.preventDefault();
-    setLoginError('');
 
-    // Demo authentication logic: check if password is '123456'
-    if (loginPassword.trim() === '123456') {
-      const email = loginEmail.trim();
-      localStorage.setItem('circlelink_host_email', email);
-      setIsLoggedIn(true);
-      setHostEmail(email);
-      setShowLoginModal(false);
-      setLoginEmail('');
-      setLoginPassword('');
-    } else {
-      setLoginError(t.loginError);
-    }
-  };
 
   const handleLogout = async () => {
     await eventService.signOut();
@@ -542,12 +524,12 @@ function Home() {
       {/* Host Login Modal Dialog */}
       {showLoginModal && (
         <div className="login-modal-overlay">
-          <div className="login-modal">
+          <div className="login-modal" style={{ maxWidth: '400px' }}>
             <button className="btn-close-modal" onClick={() => setShowLoginModal(false)}>
               <i className="fa-solid fa-xmark"></i>
             </button>
             <h3>{t.authTitle}</h3>
-            <p>{t.authSubtitle}</p>
+            <p style={{ marginBottom: '24px' }}>{t.authSubtitle}</p>
             
             {loginError && (
               <div style={{ background: 'rgba(220, 38, 38, 0.08)', border: '1px solid rgba(220, 38, 38, 0.15)', color: '#dc2626', padding: '10px 14px', borderRadius: '10px', fontSize: '13px', marginBottom: '20px', textAlign: 'left' }}>
@@ -580,7 +562,6 @@ function Home() {
                 fontWeight: '600',
                 fontSize: '14.5px',
                 cursor: 'pointer',
-                marginBottom: '20px',
                 boxShadow: '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)',
                 transition: 'background-color .218s, border-color .218s, box-shadow .218s'
               }}
@@ -601,52 +582,6 @@ function Home() {
               </svg>
               <span>{t.loginWithGoogle}</span>
             </button>
-
-            <div style={{ display: 'flex', alignItems: 'center', margin: '20px 0', color: 'var(--text-secondary)', opacity: 0.6 }}>
-              <div style={{ flex: 1, height: '1px', background: 'rgba(59, 42, 30, 0.15)' }}></div>
-              <span style={{ padding: '0 10px', fontSize: '11px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                {lang === 'vi' ? 'HOẶC' : 'OR'}
-              </span>
-              <div style={{ flex: 1, height: '1px', background: 'rgba(59, 42, 30, 0.15)' }}></div>
-            </div>
-
-            <form onSubmit={handleLoginSubmit}>
-              <div className="form-group-home">
-                <label>{t.emailLabel} <span className="required">*</span></label>
-                <div className="input-wrapper">
-                  <i className="fa-solid fa-envelope input-icon"></i>
-                  <input 
-                    type="email" 
-                    placeholder={t.emailPlaceholder}
-                    value={loginEmail}
-                    onChange={(e) => setLoginEmail(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="form-group-home" style={{ marginBottom: '14px' }}>
-                <label>{t.passwordLabel} <span className="required">*</span></label>
-                <div className="input-wrapper">
-                  <i className="fa-solid fa-key input-icon"></i>
-                  <input 
-                    type="password" 
-                    placeholder={t.passwordPlaceholder}
-                    value={loginPassword}
-                    onChange={(e) => setLoginPassword(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              
-              <span style={{ display: 'block', fontSize: '12px', color: 'var(--text-muted)', marginBottom: '22px', textAlign: 'left', lineHeight: '1.4' }}>
-                {t.loginDemoTip}
-              </span>
-
-              <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-                <i className="fa-solid fa-right-to-bracket"></i> {t.loginBtn}
-              </button>
-            </form>
           </div>
         </div>
       )}
