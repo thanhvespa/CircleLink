@@ -2957,4 +2957,62 @@ html {
         border-radius: 16px !important;
         margin: 0 auto !important;
     }
+
+    /* LiveBoard and Admin Grid/Card Scaling */
+    .host-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    .host-card {
+        padding: 20px 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Long meeting link container wrapping */
+    .event-details div[style*="display: inline-flex"],
+    .event-details div[style*="display:inline-flex"] {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 10px !important;
+    }
+
+    .event-details div[style*="display: inline-flex"] a,
+    .event-details div[style*="display:inline-flex"] a {
+        word-break: break-all !important;
+        white-space: normal !important;
+        display: inline-block !important;
+        max-width: 100% !important;
+    }
+
+    /* Simulator Console Actions button wrapping */
+    .console-actions {
+        flex-direction: column !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .console-actions .btn {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* Live check-in stats column scaling */
+    .live-stats-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    /* Data action buttons in Host Admin Panel */
+    .data-buttons-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
 }
