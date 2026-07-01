@@ -279,33 +279,6 @@ function LiveBoard() {
                 <span>{t.qrInstruction}</span>
               </div>
             </div>
-
-            {/* Simulation controls */}
-            <div className="simulator-console">
-              <div className="console-header">
-                <i className="fa-solid fa-terminal"></i> {t.simulatorConsole}
-              </div>
-              <p>
-                {lang === 'vi' 
-                  ? 'Giả lập người check-in thời gian thực trên các thiết bị di động khác để thử nghiệm Live Board.' 
-                  : 'Simulate real-time guest check-ins from mobile devices to test the Live Board.'}
-              </p>
-              <div className="console-actions">
-                <button onClick={simulateGuest} className="btn btn-secondary btn-glow" disabled={simulating}>
-                  <i className="fa-solid fa-robot"></i> {lang === 'vi' ? 'Mô phỏng 1 người' : 'Simulate 1 Guest'}
-                </button>
-                <button onClick={simulateMultipleGuests} className="btn btn-outline" disabled={simulating}>
-                  <i className="fa-solid fa-users-rays"></i> {lang === 'vi' ? 'Mô phỏng +5 người' : 'Simulate 5 Guests'}
-                </button>
-              </div>
-              {isDemoMode && (
-                <div style={{ marginTop: '8px', fontSize: '11px', color: 'var(--accent-violet)' }}>
-                  {lang === 'vi' 
-                    ? '* Đang chạy ở chế độ Demo Fallback (Dữ liệu lưu tạm trên trình duyệt này)' 
-                    : '* Running in Demo Fallback Mode (Data stored locally in this browser)'}
-                </div>
-              )}
-            </div>
           </div>
 
           {/* Right: Live List Feed */}
