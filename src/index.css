@@ -2959,11 +2959,21 @@ html {
     }
 
     /* LiveBoard and Admin Grid/Card Scaling */
+    .app-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 16px 40px 16px !important;
+        margin: 20px auto !important;
+        box-sizing: border-box !important;
+    }
+
     .host-grid,
     .host-admin-dashboard {
         grid-template-columns: 1fr !important;
         gap: 16px !important;
         width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .host-card,
@@ -2972,6 +2982,7 @@ html {
         padding: 20px 16px !important;
         width: 100% !important;
         max-width: 100% !important;
+        min-width: 0 !important; /* Force flex/grid children to shrink below contents */
         box-sizing: border-box !important;
     }
 
@@ -3021,7 +3032,11 @@ html {
 
     /* Moderation table scroll wrapper on mobile */
     .moderation-table-wrapper {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
         overflow-x: auto !important;
+        box-sizing: border-box !important;
     }
 
     .moderation-table {
